@@ -1,0 +1,79 @@
+<ng-form data-on-submit="vm.submit()" data-on-action="vm.action(action, form)"
+		 data-on-validating="vm.onValidating(formValidation)" data-on-validated="vm.onValidated(formValidation)"
+		 data-internationalization="vm.localization">
+	<md-select ng-model="vm.selectedLanguage" class=mx-text-box-languages">
+		<md-option class=mx-text-box-languages-option" ng-repeat="language in vm.languages" value="{{language}}">{{
+			language}}
+		</md-option>
+	</md-select>
+
+	<test-form-control class="test-form-default-unchecked">
+		<mx-checkbox
+
+			ng-model="vm.checkbox"
+			data-label="mx-checkbox-default-unchecked"
+			class="mx-checkbox-default-unchecked">
+		</mx-checkbox>
+	</test-form-control>
+
+	<mx-checkbox
+		ng-model="vm.checkbox6"
+		data-label="mx-checkbox-required-true"
+		class="mx-checkbox-required-true"
+		data-required="true">
+	</mx-checkbox>
+
+
+	<mx-checkbox
+		ng-model="vm.checkbox1"
+		data-label="Checkbox-readonly"
+		data-read-only="true"
+		class="mx-checkbox-readonly-true">
+	</mx-checkbox>
+
+	<mx-checkbox
+		ng-model="vm.checkbox2"
+		data-label="Checkbox-disabled"
+		data-disabled="true"
+		class="mx-checkbox-disabled-true">
+	</mx-checkbox>
+
+	<test-form-control class="test-form-default-checked">
+		<mx-checkbox
+			ng-model="vm.checkbox3"
+			data-label="Checkbox-checked"
+			class="mx-checkbox-default-checked">
+		</mx-checkbox>
+	</test-form-control>
+
+	<mx-checkbox
+		ng-model="vm.checkbox4"
+		data-label="Checkbox-disabled-checked"
+		data-disabled="true"
+		class="mx-checkbox-disabled-true-checked">
+	</mx-checkbox>
+
+	<mx-checkbox
+		ng-model="vm.checkbox5"
+		data-label="Checkbox-readonly-checked"
+		data-read-only="true"
+		class="mx-checkbox-readonly-true-checked">
+	</mx-checkbox>
+
+	<mx-checkbox
+		ng-model="vm.checkbox7"
+		data-label="mx-checkbox-readonly-disabled-unchecked"
+		class="mx-checkbox-readonly-disabled-unchecked"
+		data-read-only="true"
+		data-disabled="true">
+	</mx-checkbox>
+
+	<mx-checkbox
+		ng-model="vm.checkbox8"
+		data-label="mx-checkbox-readonly-disabled-checked"
+		class="mx-checkbox-readonly-disabled-checked"
+		data-read-only="true"
+		data-disabled="true">
+	</mx-checkbox>
+
+</ng-form>

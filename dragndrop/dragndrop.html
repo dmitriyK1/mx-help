@@ -1,0 +1,13 @@
+<div>
+	<div class="drop-zone-class" style="width:200px;height:200px;border:1px solid red;" mx-droppable="vm.onDrop($event)">
+		Drop Zone
+	</div>
+
+	<div class="drag1-class" style="width:50px;height:50px;background: green;position: absolute;left: 300px; top: 0" mx-draggable='{"data": "{{::vm.value1}}"}' onclick="alert('XXX')">
+		Drag 1
+	</div>
+
+	<div class="drag2-class" style="width:50px;height:50px;background: blue;position: absolute;left: 400px; top: 0" mx-draggable="'{{::vm.value2}}'" onclick="alert('YYY')">
+		Drag 2
+	</div>
+</div>

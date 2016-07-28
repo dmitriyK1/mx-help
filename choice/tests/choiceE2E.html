@@ -1,0 +1,56 @@
+Choise 1
+<div style="border:1px solid red; margin:10px;padding:10px;" class="mx-choice-with-radiobuttons">
+	<mx-choice
+		data-panels='[{"id":"d3b08b15-a284-ca6a-69c0-3e62ccbbce3f","title":"New Panel","description":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using `Content here, content here`, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for `lorem ipsum` will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using `Content here, content here`, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for `lorem ipsum` will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).", "name":"panel1","disabled":"false","position":1},{"id":"9336c543-79c8-c090-6876-78494e0e9909","title":"Date of Acceptance","description":"Test desc 0", "name":"panel0","disabled":"false","position":2}]'
+		selected-panel-name="'panel1'"
+		>
+	</mx-choice>
+</div>
+
+Choice 2 without radio buttons
+<mx-text-box label="Panel Name" ng-model="selectedPanel"></mx-text-box>
+<div style="border:1px solid green; margin:10px;padding:10px;" class="mx-choice-without-radio-buttons">
+	<mx-choice
+		data-panels='[{"id":"d3b08b15-a284-ca6a-69c0-3e62ccbbce3f","title":"New Panel","description":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using `Content here, content here`, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for `lorem ipsum` will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).", "name":"panel1","disabled":"false","position":1},{"id":"9336c543-79c8-c090-6876-78494e0e9909","title":"Date of Acceptance","description":"Test desc 0", "name":"panel0","disabled":"false","position":2}]'
+		selected-panel-name="selectedPanel"
+		show-switch-buttons='false'
+		>
+	</mx-choice>
+</div>
+
+Choice 3 custom
+<div style="border:1px solid green; margin:10px;padding:10px;" class="mx-choice-custom">
+	<mx-choice
+		data-panels='customDataPanels'
+		selected-panel-name="'panel1'"
+		parent-controller-as='vm'
+		>
+	</mx-choice>
+</div>
+
+<script type='text/ng-template'	id='d3b08b15-a284-ca6a-69c0-3e62ccbbce3f'>
+	<div>block1</div>
+	<mx-text-box ng-model="dataModel.text1" ng-required="true" label="text1"></mx-text-box>
+
+</script>
+<script type='text/ng-template' id='9336c543-79c8-c090-6876-78494e0e9909'>
+	<div>block2</div>
+	<mx-text-box ng-model="dataModel.text2" ng-required="true" label="text2"></mx-text-box>
+</script>
+
+<script type='text/ng-template'	id='0'>
+	<div>template 0</div>
+	<mx-text-box ng-model="vm.text1" ng-required="true" label="text0"></mx-text-box>
+</script>
+<script type='text/ng-template'	id='1'>
+	<div>template 1</div>
+	<mx-text-box ng-model="vm.text1" ng-required="false" label="text1"></mx-text-box>
+</script>
+<script type='text/ng-template'	id='2'>
+	<div>template 2</div>
+	<mx-text-box ng-model="vm.text1" ng-required="false" label="text1"></mx-text-box>
+</script>
+<script type='text/ng-template'	id='3'>
+	<div>template 3</div>
+	<mx-text-box ng-model="vm.text1" ng-required="false" label="text1"></mx-text-box>
+</script>

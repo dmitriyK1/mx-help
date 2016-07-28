@@ -1,0 +1,17 @@
+<div class="md-padding">
+	<mx-tabs data-tabs="tabs" parent-controller-as="parent"></mx-tabs>
+</div>
+
+
+<script id="1111111" type="text/ng-template">
+	tab 1 content
+</script>
+<script id="roles" type="text/ng-template">
+	<pre>{{parent.roles|json}}</pre>
+</script>
+<script id="1111113" type="text/ng-template">
+	tab 3 content
+</script>
+
+<md-button ng-click="addRole()">add</md-button>
+<md-button ng-click="removeRole()">remove</md-button>

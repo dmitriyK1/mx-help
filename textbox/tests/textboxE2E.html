@@ -1,0 +1,72 @@
+<ng-form data-name="myForm" ng-if="!vm.refresh">
+	<div class="mx-form-content">
+		<md-select ng-model="vm.selectedLanguage" class=mx-text-box-languages">
+			<md-option class=mx-text-box-languages-option" ng-repeat="language in vm.languages" value="{{language}}">{{
+				language}}
+			</md-option>
+		</md-select>
+
+		<style>
+			.block {
+				width: 40%;
+				padding: 20px;
+				float: left
+			}
+			.block2 {
+				width: 100%;
+				padding: 20px;
+				float: left
+			}
+		</style>
+		<div class="block">
+			<mx-text-box ng-model="vm.inputData" data-label="mx-text-box-required-true" data-required="true"
+						 data-name="userInput" ng-maxlength="20"
+						 data-on-blur="vm.onChange()" class="mx-text-box-required-true"></mx-text-box>
+
+			<mx-text-box ng-model="vm.firstName" data-label="mx-text-box-required-false" ng-required="true"
+						 data-name="firstInput" ng-minlength="5" class="mx-text-box-required-false"></mx-text-box>
+
+			<mx-text-box ng-model="vm.inputData3" data-label="Default"
+						 data-name="firstInput" class="mx-text-box-default"></mx-text-box>
+
+			<mx-text-box ng-model="vm.inputData1" data-label="mx-text-box-disabled-true" data-disabled="true"
+						 data-name="firstInput" class="mx-text-box-disabled-true"></mx-text-box>
+
+			<mx-text-box ng-model="vm.inputData2" data-label="mx-text-box-disabled-false" data-disabled="false"
+						 data-name="firstInput" class="mx-text-box-disabled-false"></mx-text-box>
+
+			<mx-text-box ng-model="vm.inputData3" data-label="mx-text-box-readonly-true" data-read-only="true"
+						 data-name="readOnly" class="mx-text-box-readonly-true"></mx-text-box>
+
+		</div>
+		<div class="block">
+			<mx-text-box ng-model="vm.inputData4" data-label="mx-text-box-readonly-false" data-read-only="false"
+						 data-name="readOnly" class="mx-text-box-readonly-false"></mx-text-box>
+
+			<mx-text-box ng-model="vm.inputData5" data-label="mixed" data-read-only="true" data-disabled="true"
+						 data-required="true" data-name="readOnly" class="mx-text-box-mixed"></mx-text-box>
+
+			<mx-text-box ng-model="vm.number" data-label="number" data-type="number"
+						 class="mx-text-box-number"></mx-text-box>
+
+			<mx-text-box ng-model="vm.password" data-label="password" data-type="password"
+						 class="mx-text-box-password"></mx-text-box>
+
+			<mx-text-box ng-model="vm.email" data-label="email" data-type="email"
+						 class="mx-text-box-email"></mx-text-box>
+
+			<mx-currency ng-model="vm.currencyValue" data-label="Currency editor"
+						 currency-code="{{vm.currencyCode}}"></mx-currency>
+		</div>
+
+
+	</div>
+	<br/>
+	<br/>
+	<br/>
+
+	<div class="block2">
+		<button ng-disabled="myForm.$invalid">Submit</button>
+	</div>
+
+</ng-form>

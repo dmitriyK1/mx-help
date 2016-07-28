@@ -1,0 +1,5 @@
+{
+	"test1": "PT VALUE 1",
+	"test2": "PT VALUE 2",
+	"test3": "PT param 1: {0} param 2: {1}"
+}

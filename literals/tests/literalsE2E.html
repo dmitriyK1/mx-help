@@ -1,0 +1,49 @@
+<button class="mx-literal-button-dymanic-values" ng-click="vm.setValue()">Update Value</button>
+<h3>Literals label position left </h3>
+<div layout="column">
+	<mx-literal class="mx-literal-universal" data-label="Universal" data-value="vm.untypedValue"></mx-literal>
+	<mx-literal class="mx-literal-date-short-now" data-label="Date, short" data-type="date" data-value="vm.now" data-format="short"></mx-literal>
+	<mx-literal class="mx-literal-date-default" data-label="Date, default" data-type="date" data-value="vm.now"></mx-literal>
+	<mx-literal class="mx-literal-date-ago" data-label="Date, ago" data-type="date" data-value="vm.now" data-format="timeAgo" designer-mode="true" icon="info_outline"></mx-literal>
+	<mx-literal class="mx-literal-text-multi-line" data-label="Text, multi line" data-type="string" data-value="vm.text"></mx-literal>
+	<mx-literal class="mx-literal-text-single-line" data-label="Text, single line" icon="info_outline" data-value="vm.text" data-single-line="true" class="hint"></mx-literal>
+	<mx-literal class="mx-literal-text-single-line-two" data-label="Text, single line" data-value="vm.text" data-single-line="true"></mx-literal>
+	<mx-literal class="mx-literal-text-single-line-empty" data-label="Text, single line, empty" data-value="vm.text1" data-single-line="true" ></mx-literal>
+	<mx-literal class="mx-literal-" data-label="Text, multi line" data-type="string" data-value="vm.text"></mx-literal>
+	<mx-literal class="mx-literal-text-multi-line-two" data-label="Text, multi line"  icon="info_outline"  designer-mode="true" data-type="string" data-value="vm.text"></mx-literal>
+	<mx-literal class="mx-literal-single-line-hide-on-empty-value" data-label="Text, single line, null, hide-on-empty-value" data-value="vm.text2" data-single-line="true" hide-on-empty-value="true"></mx-literal>
+	<mx-literal class="mx-literal-single-line-undefined" data-label="Text, single line, undefined" data-value="vm.text3" data-single-line="true" ></mx-literal>
+	<mx-literal class="mx-literal-single-line-undefined-hide-on-empty-value" data-label="Text, single line, undefined , hide-on-empty-value" data-value="vm.text3" data-single-line="true" hide-on-empty-value="true"></mx-literal>
+	<mx-literal class="mx-literal-single-line-undefined-icon" data-label="Text, single line, undefined , icon" icon="info_outline" designer-mode="true" data-value="vm.text3" data-single-line="true" ></mx-literal>
+	<mx-literal class="mx-literal--single-line-undefined-reserve-icon-space" data-label="Text, single line, undefined , reserve-icon-space" reserve-icon-space ="true" data-value="vm.text3" data-single-line="true" ></mx-literal>
+
+	<mx-literal class="mx-literal-html" data-label="html" data-type="html" data-value="vm.html"></mx-literal>
+	<mx-literal class="mx-literal-link-on-click" data-label="mx-literal-link-on-click" data-type="link" data-value="vm.literalValue" ></mx-literal>
+	<mx-literal class="mx-literal-link-text" data-label="mx-literal-link-text" data-type="link" designer-mode="true" data-value="vm.literalValue2" icon="info_outline"></mx-literal>
+
+	<mx-literal class="mx-literal-link-text-empty" data-label="mx-literal-link-text-empty" data-type="link" designer-mode="true" data-value="vm.literalValue3" icon="info_outline"></mx-literal>
+
+	<mx-literal class="mx-literal-link-value-not-specified" data-label="mx-literal-link-value-not-specified" data-type="link"></mx-literal>
+
+
+	<mx-literal class="mx-literal-link-text-not-set" data-label="mx-literal-link-text-not-set" data-type="link" designer-mode="true" data-value="vm.literalValue3" ></mx-literal>
+
+</div>
+
+<h3>Literals label position top</h3>
+
+<div layout="column" style="color: red">
+	<mx-literal class="mx-literal-single-line-undefined-top-label" data-label="Text, single line, undefined" label-position="top" icon="info_outline" data-value="vm.text3" data-single-line="true" ></mx-literal>
+	<mx-literal data-label="Text, single line, undefined" label-position="top" data-value="vm.text3" data-single-line="true" ></mx-literal>
+	<mx-literal data-label="Text, multi line" label-position="top" data-type="string" data-value="vm.text"></mx-literal>
+	<mx-literal data-label="Text, single line" icon="info_outline" label-position="top" data-value="vm.text" data-single-line="true"></mx-literal>
+	<mx-literal icon="info_outline" label-position="top" data-value="vm.text" data-single-line="true"></mx-literal>
+</div>
+
+<h3>Literals label position bottom</h3>
+<div layout="column" style="color: blue">
+	<mx-literal data-label="Text, single line, undefined" label-position="bottom" icon="info_outline" data-value="vm.text3" data-single-line="true" ></mx-literal>
+	<mx-literal data-label="Text, single line, undefined" label-position="bottom" data-value="vm.text3" data-single-line="true" ></mx-literal>
+	<mx-literal data-label="Text, multi line" label-position="bottom" data-type="string" data-value="vm.text"></mx-literal>
+	<mx-literal data-label="Text, single line" label-position="bottom" data-value="vm.text" data-single-line="true"></mx-literal>
+</div>

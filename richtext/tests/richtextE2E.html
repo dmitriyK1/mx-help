@@ -1,0 +1,16 @@
+<mx-form data-on-submit="vm.submit()" data-on-action="vm.action(action, form)" data-on-validating="vm.onValidating(formValidation)" data-on-validated="vm.onValidated(formValidation)" data-internationalization="vm.localization">
+	<h1>Test form for mx-rich-text-box</h1>
+	<div id="top" class="mx-form-content">
+		<div>
+			<mx-form-errors></mx-form-errors>
+		</div>
+		<!--<test-form-control>-->
+		vm.readOnly: {{vm.readOnly}}<br/>
+		vm.required: {{vm.required}}<br/>
+		vm.disabled: {{vm.disabled}}<br/>
+		<mx-text-box ng-model="vm.title" data-label="mx-text-box-required-true" data-required="true" data-disabled="vm.disabled"
+					 data-name="userInput" ng-maxlength="100"></mx-text-box>
+		<mx-rich-text-box ng-model="vm.description" data-label="mx-rich-text-box" ng-required="vm.required" data-disabled="vm.disabled" data-read-only="vm.readOnly" class="boo"></mx-rich-text-box>
+		<!--</test-form-control>-->
+	</div>
+</mx-form>

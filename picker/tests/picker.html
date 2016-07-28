@@ -1,0 +1,49 @@
+<div layout="column">
+<ng-form name="myForm">
+	<div class="mx-form-content">
+		<test-form-control>
+			<mx-picker
+				data-items="vm.pickerData"
+				ng-model="vm.pickerValue"
+				ng-required="true"
+				data-label="Classic, predfined items"
+				value-as-id="true"
+				navigate-item="vm.navigateSelectedItem"
+				browse-lookup="vm.browseLookup"
+				data-item-title-field="title">
+			</mx-picker>
+		</test-form-control>
+		<test-form-control>
+			<mx-picker
+				data-items="vm.pickerArray"
+				ng-model="vm.pickerArrayValue"
+				data-label="Simple Plain Array">
+			</mx-picker>
+		</test-form-control>
+		<test-form-control>
+				<mx-picker
+					ng-model="vm.pickerLoadOnTypingValue"
+					data-item-title-field="DisplayString"
+					data-item-id-field="Value"
+					data-load-items="vm.loadItems"
+					data-not-found="vm.notFoundDescriptor"
+					data-load-on-typing="true"
+					data-label="Load on typing">
+				</mx-picker>
+		</test-form-control>
+		</div>
+
+	<test-form-control>
+		<mx-select
+			data-items="vm.pickerData"
+			ng-model="vm.selectValue"
+			ng-required="true"
+			data-label="Select"
+			value-as-id="true"
+			data-item-title-field="title">
+		</mx-select>
+	</test-form-control>
+	</div>
+
+</ng-form>
+</div>

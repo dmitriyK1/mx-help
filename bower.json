@@ -1,0 +1,50 @@
+{
+	"name": "Pandora Components",
+	"version": "1.0.0",
+	"homepage": "https://github.com/Matrix42AG/PandoraComponents",
+	"authors": [
+		"platform@matrix42.com"
+	],
+	"description": "Pandora components",
+	"moduleType": [
+		"amd",
+		"es6",
+		"globals"
+	],
+	"keywords": [
+		"Pandora component"
+	],
+	"license": "MIT",
+	"private": true,
+	"dependencies": {
+		"jquery": "~2.1.4",
+		"angular": "1.4.8",
+		"angular-material": "1.0.5",
+		"angular-route": "1.4.8",
+		"angular-sanitize": "1.4.8",
+		"ng-file-upload": "11.1.1",
+		"angular-ui-grid": "3.1.0",
+		"tinymce-dist": "~4.3.0",
+		"angular-ui-tinymce": "0.0.16",
+		"html2canvas": "0.4.1",
+		"angular-animate": "1.4.8",
+		"angular-aria": "1.4.8",
+		"angular-mocks": "1.4.8",
+		"angular-touch": "1.4.8",
+		"angular-messages": "1.4.8",
+		"angular-ui-router": "0.2.15",
+		"sc-date-time": "1.1.6",
+		"angular-moment": "0.10.3",
+		"moment": "2.10.6",
+		"oclazyload": "1.0.9",
+		"angular-ui-calendar": "1.0.1"
+	},
+	"devDependencies": {
+		"ua-parser-js": "~0.7.9"
+	},
+	"resolutions": {
+		"angular": "1.4.8",
+		"angular-material": "1.0.5",
+		"moment": "2.10.6"
+	}
+}

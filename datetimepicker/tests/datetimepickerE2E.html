@@ -1,0 +1,24 @@
+<test-form-control ata-label="check" class="date-time-picker-default-state">
+				vm.required: {{vm.required}}<br/>
+				vm.readOnly: {{vm.readOnly}}<br/>
+				vm.disabled: {{vm.disabled}}<br/>
+
+				<mx-date-time-picker
+					data-label="test-date-picker"
+					ng-model="vm.value"
+					on-cancel="vm.onCancel()"
+					on-save="vm.onSave()"
+					data-min-date="1.1.2010"
+					data-max-date="1.2.2011"
+					data-item-title-field="title"
+					data-iso-string="false"
+
+					ng-required="vm.required"
+					data-disabled="vm.disabled"
+					data-read-only="vm.readOnly"
+					>
+				</mx-date-time-picker>
+				<div class="mx-data-result">{{vm.value}}</div>
+				<div class="mx-data-result">{{vm.dateData.toDateString()}}</div>
+				<mx-form-errors></mx-form-errors>
+</test-form-control>

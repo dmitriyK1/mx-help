@@ -1,0 +1,51 @@
+﻿<div>
+	<mx-repeater data-entities='entities' data-template-id='{{templateId}}'></mx-repeater>
+</div>
+<div>-------------------------------------------TexBox-------------------------------------------------</div>
+<div>
+	<mx-repeater parent-controller-as="vm" data-entities='entitiesTextBox' data-template-id='{{templateIdTextBox}}'></mx-repeater>
+</div>
+<div>-------------------------------------------TexBox-------------------------------------------------</div>
+<div>
+	<mx-repeater parent-controller-as="vm" data-entities='entitiesTextBox2' data-template-id='{{templateIdTextBox2}}'></mx-repeater>
+</div>
+<div>--------------------------------------------Picker------------------------------------------------</div>
+<div>
+	<mx-repeater data-entities='entitiesPicker' data-template-id='{{templateIdPicker}}'></mx-repeater>
+</div>
+
+<script type='text/ng-template' id='6f3ed39c-0aab-4606-b44e-d646d077b361'>
+	<div style="border: 1px solid grey; margin:5px;">
+		Entity data:
+		<mx-literal class="mx-literal-in-repeater-entity" data-label="Entity" data-value="entity.Entity"></mx-literal>
+		<mx-literal class="mx-literal-in-repeater-type-id" data-label="Entity Type Id" data-value="entity.EntityTypeId"></mx-literal>
+		<mx-literal class="mx-literal-in-repeater-object-ids" data-label="Entity Object Ids" data-value="entity.ObjectIds.join()"></mx-literal>
+	</div>
+</script>
+
+<script type='text/ng-template' id='6f3ed39c-0aab-4606-b44e-d646d077b362'>
+		<mx-text-box class="mx-text-box-in-repeater" ng-model="entity.Entity" data-label="mx-text-box-required-true" data-required="true"
+					 data-name="userInput" ng-maxlength="20"
+					 data-on-blur="vm.onChange()" class="mx-text-box-required-true"></mx-text-box>
+</script>
+
+<script type='text/ng-template' id='6f3ed39c-0aab-4606-b44e-d646d077b364'>
+	<mx-text-box parent-сontroller-as="vm" class="mx-text-box-in-repeater2" ng-model="vm.id" data-label="mx-text-box-required-true" data-required="true"
+				 data-name="userInput" ng-maxlength="50"
+				 data-on-blur="vm.onChange()" class="mx-text-box-required-true"></mx-text-box>
+</script>
+
+<script type='text/ng-template' id='6f3ed39c-0aab-4606-b44e-d646d077b363'>
+	<mx-picker  class="mx-picker-in-repeater"
+		data-items="entity.array"
+		ng-model="vm.id"
+		ng-required="true"
+		data-label="Classic, predfined items"
+		value-as-id="true"
+		browse-lookup="vm.browseLookup"
+		data-item-title-field="Entity"
+		data-item-id-field="EntityTypeId"
+		dropdown-html-class="mx-picker-in-repeater-values">
+	</mx-picker>
+
+</script>

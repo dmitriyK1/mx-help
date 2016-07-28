@@ -1,0 +1,38 @@
+<ng-form data-on-submit="vm.submit()" data-on-action="vm.action(action, form)" data-on-validating="vm.onValidating(formValidation)" data-on-validated="vm.onValidated(formValidation)" data-internationalization="vm.localization">
+	<test-form-control title="mx-textbox">
+		<mx-text-box data-label="Textbox" ></mx-text-box>
+	</test-form-control>
+
+	<test-form-control title="mx-picker">
+		<mx-picker
+			data-items="vm.pickerData"
+			view="select"
+			data-label="Picker"
+			ng-model="vm.pickerValue"
+			value-as-id="true"
+			data-item-title-field="'title'">
+		</mx-picker>
+	</test-form-control>
+
+	<test-form-control title="mx-Picker loaded on typing">
+		<mx-picker
+			data-label="Object Picker"
+			value-as-id="true"
+			data-load-items="vm.loadItems"
+			data-load-on-typing="true"
+			data-load-delay="1000">
+		</mx-picker>
+	</test-form-control>
+
+	<test-form-control title="mx-checkbox">
+		<mx-checkbox
+			ng-model="vm.checkbox"
+			data-label="Checkbox">
+		</mx-checkbox>
+	</test-form-control>
+
+	<test-form-control title="mx-checkbox">
+		<mx-date-picker ng-model="vm.dateData" data-label="Bitrhday" ng-required="true"></mx-date-picker>
+	</test-form-control>
+
+</ng-form>

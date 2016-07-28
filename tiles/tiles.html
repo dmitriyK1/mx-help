@@ -1,0 +1,13 @@
+<mx-template-tiles
+	list="vm.data"
+	use-checkboxes="true"
+	get-item-actions="vm.getItemActions(item)">
+	<h4>{{:: item.title }}</h4>
+	<p>{{:: item.description }}</p>
+</mx-template-tiles>
+
+<mx-tiles
+	list="vm.data"
+	use-checkboxes="true"
+	get-item-actions="vm.getItemActions(item)">
+</mx-tiles>

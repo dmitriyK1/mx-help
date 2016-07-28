@@ -1,0 +1,12 @@
+<div name="parent-container" style="height:700px;" layout="column">
+	<mx-grid
+		data="vm.myData"
+		options="vm.gridOptions"
+		on-add="alert('rowAdded')";
+		on-remove="alert('rows removed')";
+		selection-changed="vm.selectionChanged(selectedItems)"
+		selected-items="vm.selectedItems"
+		data-get-item-actions="vm.getItemActions(item)">
+	</mx-grid>
+
+</div>

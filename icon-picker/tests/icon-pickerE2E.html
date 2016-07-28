@@ -1,0 +1,30 @@
+<ng-form data-name="myForm" ng-if="!vm.refresh">
+	<div class="mx-form-content">
+		<md-select ng-model="vm.selectedLanguage" class=mx-text-box-languages">
+			<md-option class=mx-icon-picker-languages-option" ng-repeat="language in vm.languages" value="{{language}}">{{
+				language}}
+			</md-option>
+		</md-select>
+
+
+
+    <h2>Icon picker 1. ngModel: {{vm.icon}}</h2>
+	<test-form-control class="test-form-default">
+		<mx-icon-picker class="mx-icon-picker-default" label="Pick an icon" ng-model="vm.icon" ng-required="false"></mx-icon-picker>
+	</test-form-control>
+
+
+    <h2>Icon picker 2. ngModel: {{vm.icon1}}</h2>
+	<test-form-control class="test-form-required-true">
+  	 	 <mx-icon-picker class="mx-icon-picker-required-true" label="Pick an icon" ng-model="vm.icon1" ng-required="true"></mx-icon-picker>
+	</test-form-control>
+
+    <h2>Icon picker 2. Readonly</h2>
+    <mx-icon-picker class="mx-icon-picker-readonly-true" label="Pick an icon" ng-model="vm.icon1" read-only="true"></mx-icon-picker>
+
+    <h2>Icon picker 2. Disabled</h2>
+    <mx-icon-picker class="mx-icon-picker-disabled-true" label="Pick an icon" ng-model="vm.icon1" disabled="true"></mx-icon-picker>
+
+
+
+</ng-form>

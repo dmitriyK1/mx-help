@@ -1,0 +1,14 @@
+
+<div name="parent-container3" style="height:500px;" layout="column" flex>
+
+	<mx-grid
+		skipheaderactions
+		class="mx-grid-no-header-actions"
+		data="vm.myData"
+		options="vm.gridOptions"
+		selection-changed="vm.selectionChanged(selectedItems)"
+		selected-items="vm.selectedItems"
+		data-get-item-actions="vm.getItemActions(item)">
+	</mx-grid>
+
+</div>

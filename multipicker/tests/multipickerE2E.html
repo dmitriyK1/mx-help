@@ -1,0 +1,92 @@
+<ng-form name="myForm">
+
+	<div layout="column">
+		<mx-multi-picker
+			data-items="vm.pickerData"
+			data-read-only="false"
+			ng-model="vm.pickerValue"
+			ng-required="true"
+			data-value-as-id="true"
+			navigate-item="vm.navigateSelectedItem"
+			data-label="Value as Id, required"
+			data-item-title-field="title"
+			class="mx-multi-picker-default"
+			dropdown-html-class="mx-multi-picker-default-values">
+		</mx-multi-picker>
+
+		<div class="mx-multi-picker-default-results">
+			{{vm.pickerValue}}
+		</div>
+
+	</div>
+
+	<div layout="column">
+		<mx-multi-picker
+			data-items="vm.pickerData"
+			data-read-only="false"
+			ng-model="vm.pickerItemValue"
+			ng-required="true"
+			data-label="Value as Item"
+			data-item-title-field="title"
+			class="mx-multi-picker-value-as-item"
+			browse-lookup="vm.browseLookup"
+			dropdown-html-class="mx-multi-picker-value-as-item-values">
+		</mx-multi-picker>
+		<div class="mx-multi-picker-value-as-item-results">
+			Value: {{vm.pickerItemValue}}
+		</div>
+	</div>
+
+	<div layout="column">
+		<mx-multi-picker
+			data-items="['Apple', 'Banane', 'Pear', 'Plum']"
+			data-read-only="false"
+			ng-model="vm.pickerSimpleValue"
+			data-label="Simple Array Items"
+			data-item-title-field="title"
+			class="mx-multi-picker-simple-array-items"
+			dropdown-html-class="mx-multi-picker-simple-array-items-values">
+		</mx-multi-picker>
+		<div class="mx-multi-picker-simple-array-items-results">
+			Value: {{vm.pickerSimpleValue}}
+		</div>
+	</div>
+
+	<div layout="column">
+		<mx-multi-picker
+			data-items="vm.pickerData"
+			data-read-only="false"
+			ng-model="vm.pickerCommaValue"
+			data-label="Comma Separated Value"
+			separator-char=","
+			data-item-title-field="title"
+			class="mx-multi-picker-comma-separated-value"
+			dropdown-html-class="mx-multi-picker-comma-separated-value-values">
+		</mx-multi-picker>
+		<div class="mx-multi-picker-comma-separated-value-results">
+			Value: {{vm.pickerCommaValue}}
+		</div>
+	</div>
+
+	<div layout="column">
+		<mx-multi-picker
+			ng-model="vm.pickerLoadOnTypingValue"
+			data-item-title-field="DisplayString"
+			data-item-id-field="Value"
+			data-load-items="vm.loadItems"
+			data-load-on-typing="true"
+			data-label="Load on typing"
+			class="mx-multi-picker-load-on-typing"
+			dropdown-html-class="mx-multi-picker-load-on-typing-values">
+		</mx-multi-picker>
+		<div class="mx-multi-picker-load-on-typing-results">
+			Value: {{vm.pickerLoadOnTypingValue}}
+		</div>
+	</div>
+	<!--
+
+        <div class="mx-form-content">
+
+        </div>
+    -->
+</ng-form>

@@ -1,0 +1,41 @@
+<ng-form data-name="myForm" ng-if="!vm.refresh">
+	<div class="mx-form-content">
+		<md-select ng-model="vm.selectedLanguage" class=mx-text-box-languages">
+			<md-option class=mx-text-box-languages-option" ng-repeat="language in vm.languages" value="{{language}}">{{
+				language}}
+			</md-option>
+		</md-select>
+
+
+		<div>
+			<mx-currency class = "currencyValueUSD-class" ng-model="vm.currencyValueUSD" data-label="currencyValueUSD"
+						 currency-code="{{vm.currencyCodeUSD}}"></mx-currency>
+
+			<mx-currency class = "currencyValueEUR-class" ng-model="vm.currencyValueEUR" data-label="currencyValueEUR"
+						 currency-code="{{vm.currencyCodeEUR}}"></mx-currency>
+
+			<mx-currency class = "currencyValueCHF-class" ng-model="vm.currencyValueCHF" data-label="currencyValueCHF"
+						 currency-code="{{vm.currencyCodeCHF}}"></mx-currency>
+
+			<mx-currency class = "currencyValueCAD-class" ng-model="vm.currencyValueCAD" data-label="currencyValueCAD"
+						 currency-code="{{vm.currencyCodeCAD}}"></mx-currency>
+
+
+
+			<mx-currency class = "currencyValueUSD-required-class"  data-label="required"  data-required="true"
+						 currency-code="{{vm.currencyCodeUSD}}"></mx-currency>
+
+			<mx-currency class = "currencyValueUSD-readonly-class" ng-model="vm.currencyValueUSD" data-label="readonly" data-read-only="true"
+						 currency-code="{{vm.currencyCodeUSD}}"></mx-currency>
+
+			<mx-currency class = "currencyValueUSD-disabled-class" ng-model="vm.currencyValueUSD" data-label="disabled" data-disabled="true"
+						 currency-code="{{vm.currencyCodeUSD}}"></mx-currency>
+
+			<mx-currency class = "currencyValueUSD-empty-class" ng-model="vm.currencyValueEmpty" currency-code="{{vm.currencyCodeUSD}}" data-label="empty" required="true"></mx-currency>
+		</div>
+
+
+	</div>
+	<br/>
+
+</ng-form>

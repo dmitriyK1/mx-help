@@ -1,0 +1,62 @@
+<mx-form
+	on-submit="vm.submit()"
+	on-action="vm.action(action, form)"
+	on-validating="vm.onValidating(formValidation)"
+	on-validated="vm.onValidated(formValidation)"
+	internationalization="vm.localization">
+	<h1>Test form for mx-rich-text-box</h1>
+	<div id="top" class="mx-form-content">
+		<div>
+			<mx-form-errors></mx-form-errors>
+		</div>
+		<!--<test-form-control>-->
+		<mx-text-box
+			ng-model="vm.title"
+			label="mx-text-box-required-true"
+			required="true"
+			name="userInput"
+			ng-maxlength="100">
+		</mx-text-box>
+
+
+		<h2>Default mode</h2>
+		<mx-rich-text-box
+			ng-model="vm.description"
+			label="mx-rich-text-box"
+			ng-required="vm.required"
+			class="boo"
+			on-focus="vm.testFocus(event, editor)"
+			on-blur="vm.testBlur(event, editor)">
+		</mx-rich-text-box>
+		<!--</test-form-control>-->
+
+		<h2>Light mode</h2>
+		<mx-rich-text-box
+			ng-model="vm.description"
+			advanced-mode="false"
+			label="mx-rich-text-box"
+			ng-required="vm.required"
+			class="boo">
+		</mx-rich-text-box>
+
+		<h2>Readonly mode</h2>
+		<mx-rich-text-box
+			ng-model="vm.description"
+			advanced-mode="false"
+			read-only="true">
+		</mx-rich-text-box>
+
+		<h2>Disabled mode</h2>
+		<mx-rich-text-box
+			ng-model="vm.description"
+			advanced-mode="false"
+			disabled="true">
+		</mx-rich-text-box>
+
+
+		<hr />
+		<h2>Resultion text</h2>
+		[{{vm.description}}]
+
+	</div>
+</mx-form>

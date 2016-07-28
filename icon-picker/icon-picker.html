@@ -1,0 +1,20 @@
+<div class="layout-row">
+
+    <div class="md-padding flex-25">
+        <h2>Icon picker 1. ngModel: {{vm.icon}}</h2>
+        <mx-icon-picker label="Pick an icon" ng-model="vm.icon" ng-required="true"></mx-icon-picker>
+    </div>
+
+    <div class="md-padding flex-25">
+        <h2>Icon picker 2. ngModel: {{vm.icon1}}</h2>
+        <mx-icon-picker label="Pick an icon" ng-model="vm.icon1" ng-required="false"></mx-icon-picker>
+    </div>
+    <div class="md-padding flex-25">
+        <h2>Icon picker 2. Readonly</h2>
+        <mx-icon-picker label="Pick an icon" ng-model="vm.icon1" read-only="true"></mx-icon-picker>
+    </div>
+    <div class="md-padding flex-25">
+        <h2>Icon picker 2. Disabled</h2>
+        <mx-icon-picker label="Pick an icon" ng-model="vm.icon1" data-disabled="true"></mx-icon-picker>
+    </div>
+</div>

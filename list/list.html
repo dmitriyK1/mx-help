@@ -1,0 +1,48 @@
+<div class="layout-row">
+	<div flex="33">
+		<!--<mx-template-list-->
+				<!--data-list="vm.data"-->
+				<!--use-checkboxes="true"-->
+				<!--data-get-item-actions="vm.getItemActions(item)">-->
+			<!--<div style="border:1px solid red;margin:1rem; padding:1rem;">-->
+				<!--<h1>{{:: item.title }}</h1>-->
+				<!--<p>{{:: item.description }}</p>-->
+			<!--</div>-->
+		<!--</mx-template-list>-->
+	</div>
+	<div flex="33">
+		<mx-template-list
+				data-list="vm.data"
+				use-checkboxes="true"
+				template-id="my-list-template"
+				allow-paging="true"
+				virtual="true"
+				>
+		</mx-template-list>
+
+	</div>
+	<div flex="33">
+		<mx-template-list
+				data-list="vm.data"
+				use-checkboxes="false"
+				template-id="my-list-template"
+				page-size="3"
+				allow-paging="true">
+
+
+		</mx-template-list>
+
+	</div>
+	<div flex="33">
+		<mx-template-list data-list="vm.data">
+			<h1>TRANCLUDE: {{:: item.title }}</h1>
+			<p>TRANCLUDE: {{:: item.description }}</p>
+		</mx-template-list>
+
+	</div>
+</div>
+
+<script id="my-list-template" type="text/ng-template">
+	<h1>{{:: item.title }}</h1>
+	<p>{{:: item.description }}</p>
+</script>

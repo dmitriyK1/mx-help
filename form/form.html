@@ -1,0 +1,107 @@
+<ng-form  mx-form data-object-id="1111">
+	<div class="mx-form-content">
+		<mx-form-errors data-errors="vm.errors"></mx-form-errors>
+
+		<md-tabs md-dynamic-height md-border-bottom md-selected="vm.selectedTab">
+			<md-tab label="one">
+				<mx-text-box ng-model="vm.inputData1" data-label="user, required" data-required="true" data-name="userInput" ng-maxlength="2"></mx-text-box>
+
+				<mx-text-box ng-model="vm.firstName" data-label="minlength" data-required="true"
+							 data-name="firstInput" ng-minlength="5" data-required="false" class="mx-text-box-required-false"></mx-text-box>
+
+				<mx-text-box ng-model="vm.Default" data-label="Default"
+							 data-name="firstInput" class="mx-text-box-default"></mx-text-box>
+			</md-tab>
+			<md-tab label="two">
+				222
+
+			</md-tab>
+		</md-tabs>
+
+		<button ng-click="vm.addErrors()">Set Server error</button>
+		<button ng-click="vm.resetErrors()">Reset Server error</button>
+		<mx-form-message data-active="vm.isWarningActive" data-message="'Custom warning'" data-type="warning"></mx-form-message>
+
+		<button ng-click="vm.switchWarningActive()">Dis/-activate Warning</button>
+
+		<mx-text-box ng-model="vm.inputData" data-label="user" data-required="true" data-name="userInput" ng-maxlength="2"></mx-text-box>
+
+		<div>
+
+			<div layout="row">
+				<div layout="column"><mx-date-picker ng-model="vm.dateData" data-label="Bitrhday" ng-required="true"></mx-date-picker></div>
+				<div layout="column">
+				<md-input-container>
+					<input type="number" ng-model="vm.hours" min="0" max="23">
+				</md-input-container>
+				</div>
+				<div layout="column">:</div>
+				<div layout="column">
+					<md-input-container>
+						<input type="number" ng-model="vm.minutes" min="0" max="59">
+					</md-input-container>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div>
+			<mx-date-time-picker
+				ng-model="vm.dateISO"
+				label="Bitrhday"
+				ng-required="true"
+				iso-string="true">
+			</mx-date-time-picker>
+		</div>
+
+		<div>
+			<mx-date-time-picker
+				ng-model="vm.dateISO2"
+				label="Bitrhday"
+				ng-required="true"
+				iso-string="true">
+			</mx-date-time-picker>
+		</div>
+
+		<div>
+			<mx-date-time-picker
+				ng-model="vm.dateISO3"
+				label="Bitrhday"
+				ng-required="true"
+				display-mode="time"
+				iso-string="true">
+			</mx-date-time-picker>
+		</div>
+
+		<div>
+			<mx-date-time-picker
+				ng-model="vm.dateISO3"
+				label="Bitrhday"
+				ng-required="true"
+				display-mode="date"
+				iso-string="true">
+			</mx-date-time-picker>
+		</div>
+
+		<div>
+			<mx-date-time-picker
+				ng-model="vm.dateISO3"
+				label="Bitrhday"
+				ng-required="true"
+				display-mode="full"
+				iso-string="true">
+			</mx-date-time-picker>
+		</div>
+		{{vm.dateData.toDateString()}}
+		<div>
+			<mx-date-picker ng-model="vm.dateISO" data-label="Bitrhday" ng-required="true" data-iso-string="true"></mx-date-picker>
+		</div>
+
+
+
+
+		{{vm.dateISO}}
+	</div>
+
+</ng-form>

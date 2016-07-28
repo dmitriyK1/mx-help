@@ -1,0 +1,12 @@
+<div>
+	<p>Language: {{vm.language}}</p>
+
+	<!--div style="position: absolute; left: 50%"-->
+		<mx-feedback
+			data-is-enabled="vm.isFeedbackEnabled"
+			data-send="vm.send(feedback)"
+			data-context="'my context'"
+			data-application="'My App'"
+			data-top-offset="50px"/>
+	<!--/div-->
+</div>

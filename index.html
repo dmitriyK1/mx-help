@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-strict-di>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Sample</title>
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+	<script src="bower_components/html2canvas/build/html2canvas.min.js"></script>
+	<script src="bower_components/ua-parser-js/dist/ua-parser.min.js"></script>
+	<script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
+	<script src="bower_components/angular-ui-grid/ui-grid.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="bower_components/angular-animate/angular-animate.js"></script>
+	<script src="bower_components/angular-material/angular-material.js"></script>
+	<script src="bower_components/angular-aria/angular-aria.js"></script>
+	<script src="bower_components/tinymce-dist/tinymce.js"></script>
+	<script src="bower_components/angular-ui-tinymce/src/tinymce.js"></script>
+	<script src="bower_components/sc-date-time/dist/sc-date-time.js"></script>
+	<script src="bower_components/mx.components/mx.components.all.js"></script>
+	<script src="bower_components/moment/moment.js"></script>
+	<script src="bower_components/angular-moment/angular-moment.js"></script>
+	<script src="bower_components/oclazyload/dist/ocLazyLoad.js"></script>
+	<!-- inject:js -->
+	<!-- endinject -->
+
+	<script src="index.js"></script>
+	<script src="feedback/feedback.js"></script>
+	<script src="picker/picker.js"></script>
+	<script src="multipicker/multipicker.js"></script>
+	<script src="pickerTest/pickerTest.js"></script>
+	<script src="accordion/accordion.js"></script>
+	<script src="list/list.js"></script>
+	<script src="tiles/tiles.js"></script>
+	<script src="mask/mask.js"></script>
+	<script src="form/form.js"></script>
+	<script src="dragndrop/dragndrop.js"></script>
+	<script src="journal/journal.js"></script>
+	<script src="uploader/uploader.js"></script>
+	<script src="richtext/richtext.js"></script>
+	<script src="textbox/textbox.js"></script>
+	<script src="checkbox/checkbox.js"></script>
+	<script src="components/test-form-control.js"></script>
+	<script src="formControls/formControls.js"></script>
+	<script src="grid/grid.js"></script>
+	<script src="literals\literals.js"></script>
+	<script src="icon-picker/icon-picker.js"></script>
+	<script src="choice/choice.js"></script>
+	<script src="repeater/repeater.js"></script>
+	<script src="tabs/tabs.js"></script>
+	<script src="calendar/calendar.js"></script>
+	<script src="help/help.js"></script>
+
+	<script src="repeater/tests/repeaterE2E.js"></script>
+	<script src="choice/tests/choiceE2E.js"></script>
+	<script src="pickerTest/tests/pickerTestE2E.js"></script>
+	<script src="textbox/tests/textboxE2E.js"></script>
+	<script src="currency/tests/currencyE2E.js"></script>
+	<script src="multipicker/tests/multipickerE2E.js"></script>
+	<script src="checkbox/tests/checkboxE2E.js"></script>
+	<script src="icon-picker/tests/icon-pickerE2E.js"></script>
+	<script src="literals\tests\literalsE2E.js"></script>
+	<script src="bottomSheet/bottomSheet.js"></script>
+	<script src="datetimepicker/tests/datetimepickerE2E.js"></script>
+	<script src="tabs/tests/tabsE2E.js"></script>
+	<script src="rating/tests/ratingE2E.js"></script>
+
+	<script src="internationalization/internationalization.js"></script>
+	<link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+	<link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.min.css" />
+	<link rel="stylesheet" href="bower_components/mx.components/mx.components.all.css" />
+	<link rel='stylesheet' href='bower_components/sc-date-time/dist/sc-date-time.css'>
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type='text/css'>
+	<style>
+		html{
+			font-size: 62.5%;
+			line-height: 1.4;
+		}
+		 body {
+			 font-family: 'Open Sans', sans-serif;
+			 font-size: 100%;
+		 }
+	</style>
+</head>
+<body ng-controller="SampleController as vm">
+	<div ng-view></div>
+	<br /><br />
+	<a href="#/calendar">Go to Event Calendar >>>> </a><br />
+	<a href="#/"><<< Go Back</a>
+</body>
+</html>

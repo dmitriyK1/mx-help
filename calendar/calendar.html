@@ -1,0 +1,25 @@
+<div style="width:50%; margin-left: 25%;">
+
+	[{{vm.lang}}]
+	<md-input-container>
+		<label>Language</label>
+		<md-select ng-model="vm.lang">
+			<md-option value="de">de</md-option>
+			<md-option value="en">en</md-option>
+			<md-option value="ru">ru</md-option>
+		</md-select>
+	</md-input-container>
+
+	<mx-calendar
+		items="vm.events"
+		on-range-select="vm.onRangeSelected(start, end)"
+		language="{{vm.lang}}">
+	</mx-calendar>
+	<br />
+
+
+
+
+	[{{vm.events}}]
+
+</div>

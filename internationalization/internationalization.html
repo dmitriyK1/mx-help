@@ -1,0 +1,15 @@
+<div ng-if="!vm.refresh">
+	<p>Localized value 1: {{vm.lngValue1}}</p>
+	<p>Localized value 2: {{'sample.test2' | mxi18n}}</p>
+	<p>Localized value 2 with def: {{'sample.test2' | mxi18n : 'def value'}}</p>
+	<p>Formatted value: {{vm.lngValue3}}</p>
+</div>
+<select ng-model="vm.language" ng-change="vm.changelng()">
+	<option>en</option>
+	<option>de</option>
+	<option>es</option>
+	<option>fr</option>
+	<option>nl</option>
+	<option>pl</option>
+	<option>pt</option>
+</select>
